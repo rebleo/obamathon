@@ -1,0 +1,17 @@
+{
+  "name": "obamathon",
+  "version": "1.0.0",
+  "description": "a neat infastructure",
+  "main": "obama.js",
+  "dependencies": {
+    "clarifai": "^2.1.0-dev",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "rebecca (marks)",
+  "license": "ISC"
+}
