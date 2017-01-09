@@ -4,16 +4,13 @@ var bigData;
 var littleData;
 var birdData;
 
-var app = new Clarifai.App(
-		'Sb8yECwZ6h3c00Oh7bAOzCESq-MVxapDidkcssEc',
-		'yMtPNkdWeZtKIH2suMv0893R4RA4BeB2dYbB8WXn');
-
-
 function preload(){
 	picture = loadImage('data/6600.jpg');
 	// Just all the data is loaded from the server
 	littleData = loadJSON('/data/littleData.json');
 	birdData = loadJSON('/data/birds.json');
+
+
 }
 
 // var pictureData = theCanvas.toDataURL("data/6600.jpg",0.2);
