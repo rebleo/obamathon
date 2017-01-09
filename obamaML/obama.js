@@ -1,4 +1,4 @@
-var Clarifai = require('clarifai');
+ var Clarifai = require('clarifai');
 var theConcepts;
 
 // instantiate a new Clarifai app passing in your clientId and clientSecret
@@ -8,7 +8,7 @@ var app = new Clarifai.App(
 );
 
 // predict the contents of an image by passing in a url
-app.models.predict(Clarifai.GENERAL_MODEL, "http://site.rebeccaleopold.com/wp-content/uploads/2013/09/reb2011.jpg").then(
+app.models.predict(Clarifai.GENERAL_MODEL, "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAPDAAAAJDk4N2VkMjcyLTVhMmEtNGUzNC05MWRjLWVmMWEwZjc4N2FjMQ.jpg").then(
 	handleResponse,
 	handleError
 );

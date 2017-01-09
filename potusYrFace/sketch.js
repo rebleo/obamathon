@@ -39,15 +39,14 @@ var emojiGo = function() {
 ////////////// make the page //////////////////
 	theCanvas = document.getElementById('thecanvas1');
  	theContxt = theCanvas.getContext('2d');
-
 	theTitleCanvas = document.getElementById('thecanvas2');
 	theTitleText = theTitleCanvas.getContext('2d');
-	//
-	// theTitleText.fillStyle = "green";
-	// theTitleText.fillRect(0, 0, theTitleCanvas.width, theTitleCanvas.height);
-	theTitleText.font = "20px Georgia";
-	theTitleText.fillStyle = "blue";
-	theTitleText.fillText("Obama Looking...",50,40);
+
+	theTitleText.fillStyle = "green";
+	theTitleText.fillRect(0, 0, theTitleCanvas.width, theTitleCanvas.height);
+	// theTitleText.font = "20px Georgia";
+	// theTitleText.fillStyle = "blue";
+	// theTitleText.fillText("Obama Looking...",50,40);
 
 //init the CLM tracker
 	ctracker = new clm.tracker();
@@ -60,10 +59,21 @@ var emojiGo = function() {
 var draw = function() {
 //ANYTHING DRAWN ON CANVAS WILL BE EMITTED YOU FOOL!
  	theContxt.drawImage(meFace,0,0,meFace.width,meFace.height);
+	var title = document.getElementById('obama');
+	theTitleText.drawImage(title, 35,100);
+	var happy = document.getElementById('word4');
+	theTitleText.drawImage(happy, 100, 200);
+	var sad = document.getElementById('word2');
+	theTitleText.drawImage(sad, 250,  200);
+	var suprised = document.getElementById('word3');
+	theTitleText.drawImage(suprised, 400,  200);
+	var mad = document.getElementById('word1');
+	theTitleText.drawImage(mad, 550,  200);
 
-//all this clm tracker emotion stuff i don't entirely understand
+	theContxt.drawImage(title, 0, 410)
+//all this clm tracker emotion stuff
 	var cp = ctracker.getCurrentParameters();
-	 //angry, disgusted, fear, sad, suprised, happy
+	 //angry, sad, suprised, happy
 	var expression = ec.meanPredict(cp);
 	var positions = ctracker.getCurrentPosition();
 
@@ -77,12 +87,13 @@ var draw = function() {
 					if (expression[j].value > 0.4) {
 						var myEmo = document.getElementById('icon'+(j+1));
 						// console.log(j);
-						var myFeeling = feelings[j];
+						// var myFeeling = feelings[j];
 						// console.log(myFeeling)
-						theContxt.drawImage(myEmo,positions[i][0], positions[i][1]-25);
-						var feelingTitle = theTitleText.fillText(myFeeling, 225, 40 + (j * 40));
+						theContxt.drawImage(myEmo,positions[i][0]-50, positions[i][1]-200);
+						// var feelingTitle = theTitleText.fillText(myFeeling, 225, 40 + (j * 40));
+
 					} else {
-						feelingTitle = theTitleText.fillText(" ",225,40);
+						// feelingTitle = theTitleText.fillText(" ",225,40);
 						// console.log("whatever")
 
 					}
