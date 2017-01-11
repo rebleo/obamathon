@@ -6,5 +6,6 @@ Feel yrself feeling with [Barack Obama](https://rml444.itp.io:8100/index.html)! 
 
 ![](face.png)
 
-### obamaML
-work in progress.
+#### obamaML
+Work in progress. Using [clarifai](https://www.clarifai.com/) and Whitehouse image data. 
+![](/obamaML/public/data/rainbow.jpg)

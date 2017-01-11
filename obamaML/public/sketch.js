@@ -42,8 +42,8 @@ function setup(){
 		 }
 	 }
 
-
 	 makeLearning();
+
 
 
 }
@@ -62,7 +62,7 @@ function makeLearning(){
  //this is not right. need to come back here!
  //11:24 - Jan. 9
 	 for (var j = 0; j < photoArray.length - 1; j++){
-		 console.log(photoArray[j])
+		 console.log(photoArray[0])
 	 }
 
 		//okay this is returning the split string, after declaring array, need to create a file path to LOAD the images, so script knows the string applies to a file it wants to parse.
@@ -74,11 +74,12 @@ function makeLearning(){
 
 	var number2 = Math.floor(random(bigData.length - 1));
 	var pix = bigData[ number2 ];
-	image(pix, 100,100,pix.width,pix.height);
+	image(pix, 10,10,pix.width,pix.height);
 }
 
 
 function draw(){
+
 
 
 }
